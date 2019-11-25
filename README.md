@@ -12,4 +12,13 @@ There is a demo account for new users to see how it worked.
 #Room name: 225
 #Password: 123
 
+there are four users would like to share an apartment with 3 bedrooms and a livingroom. The total price is 3500. Here are their evaluations:
+
+userName | room1Price | room2Price | room3Price | room4Price
+---------|------------|------------|------------|-----------
+rich tony | 1100 | 950 | 850 | 600
+poor tom | 950 | 900 | 850 | 800
+high cost-effective | 1050 | 900 | 850 | 700
+arsenal | 1000 | 950 | 850 | 700
+
 Thanks for reading this!
