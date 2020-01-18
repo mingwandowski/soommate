@@ -10,6 +10,7 @@ Apologize for the stability of the application. The amount check has been fixed,
 There is a demo account for new users to see how it worked. 
 
 #Room name: 225
+
 #Password: 123
 
 there are four users would like to share an apartment with 3 bedrooms and a livingroom. The total price is 3500. Here are their evaluations:
