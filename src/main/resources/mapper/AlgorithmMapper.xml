@@ -3,7 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- namespace:该mapper.xml映射文件的 唯一标识 -->
+<!-- namespace: The unique identifier of the mapper.xml mapping file -->
 <mapper namespace="com.mingwandowski.soommate.dao.IAlgorithmDao">
 	
 	<resultMap id="ResultResult" type="com.mingwandowski.soommate.model.Result">

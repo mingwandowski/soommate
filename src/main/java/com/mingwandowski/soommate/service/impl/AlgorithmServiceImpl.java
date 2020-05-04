@@ -14,7 +14,8 @@ import com.mingwandowski.soommate.dao.IAlgorithmDao;
 import com.mingwandowski.soommate.service.AlgorithmService;
 
 public class AlgorithmServiceImpl implements AlgorithmService {
-	// service依赖于dao(mapper)
+	// IAlgorithmDao is in Ioc container
+	// service depends on dao
 	private IAlgorithmDao algorithmDao;
 
 	public void setIAlgorithmDao(IAlgorithmDao algorithmDao) {

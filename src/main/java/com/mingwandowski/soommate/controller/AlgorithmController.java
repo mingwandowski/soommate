@@ -36,6 +36,7 @@ public class AlgorithmController {
 		// get all users by roomName
 		List<User> userList = algorithmService.queryUserByRoomName(roomName);
 
+		// calculate the result
 		algorithmService.calculate(userList, userNumber, req);
 
 		return "resultPage";

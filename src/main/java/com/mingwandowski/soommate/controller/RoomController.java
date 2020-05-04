@@ -13,9 +13,8 @@ import com.mingwandowski.soommate.model.User;
 import com.mingwandowski.soommate.service.RoomService;
 
 @RequestMapping("roomController")
-@Controller // RoomController加入Ioc容器
+@Controller // put RoomController into Ioc container
 public class RoomController {
-	// 控制依赖于Service
 	@Autowired
 	@Qualifier("roomService")
 	private RoomService roomService;

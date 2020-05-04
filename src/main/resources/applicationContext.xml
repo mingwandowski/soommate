@@ -7,7 +7,7 @@
                         http://www.springframework.org/schema/tx
                         http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- 依赖注入：给service注入dao -->
+    <!-- Dependency injection: inject dao into service -->
     <bean id="roomService" class="com.mingwandowski.soommate.service.impl.RoomServiceImpl">
         <property name="IRoomDao"  ref="IRoomDao"></property>
     </bean>
@@ -16,20 +16,20 @@
         <property name="IAlgorithmDao"  ref="IAlgorithmDao"></property>
     </bean>
 
-    <!-- 给controller注入service
-    <bean id="studentController" class="org.lanqiao.controller.StudentController">
-        <property name="studentService" ref="studentService"></property>
+    <!-- Dependency injection: inject service into controller
+    <bean id="roomController" class="com.mingwandowski.soommate.controller.RoomController">
+        <property name="RoomService" ref="RoomService"></property>
     </bean>
      -->
 
 
 
-    <!-- 加载properties文件 -->
+    <!-- load the properties file -->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="location" value="classpath:jdbc.properties"/>
     </bean>
 
-    <!-- 配置数据源 -->
+    <!-- Configure the data source -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="${driver}"/>
         <property name="url" value="${url}"/>
@@ -37,26 +37,26 @@
         <property name="password" value="${password}"/>
     </bean>
 
-    <!-- mybatis和spring完美整合，不需要mybatis的配置映射文件 -->
+    <!-- mybatis and spring are perfectly integrated, no configuration mapping file for mybatis is required -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <!-- 扫描model包 -->
+        <!-- Scan the model package -->
         <property name="typeAliasesPackage" value="com.mingwandowski.soommate.model"/>
-        <!-- 扫描sql配置文件:mapper需要的xml文件-->
+        <!-- Scan sql configuration file: xml file required by mapper -->
         <property name="mapperLocations" value="classpath:mapper/*.xml"/>
     </bean>
 
-    <!-- Mapper动态代理开发，扫描dao接口包-->
+    <!-- Mapper dynamic agent development, scan dao interface package -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <!-- 注入sqlSessionFactory -->
+        <!-- Inject sqlSessionFactory -->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <!-- 给出需要扫描Dao接口包 -->
+        <!-- Give the interface package Dao that needs to be scanned -->
         <property name="basePackage" value="com.mingwandowski.soommate.dao"/>
     </bean>
 
-    <!-- 事务管理 -->
+    <!-- Transaction management -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <!--数据库连接池-->
+        <!--Database connection pool-->
         <property name="dataSource" ref="dataSource"/>
     </bean>
 

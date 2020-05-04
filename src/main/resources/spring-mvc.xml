@@ -10,16 +10,16 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
-    <!-- 扫描注解，这样com.mingwandowski.soommate包下的文件都能被扫描 -->
+    <!-- Scan the annotations so that the files under the com.mingwandowski.soommate package can be scanned -->
     <context:component-scan base-package="com.mingwandowski.soommate"/>
 
-    <!-- 开启SpringMVC注解模式 -->
+    <!-- Turn on Spring MVC annotation mode -->
     <mvc:annotation-driven/>
 
-    <!-- 静态资源默认servlet配置 -->
+    <!-- Static resource default servlet configuration -->
     <mvc:default-servlet-handler/>
 
-    <!-- 配置返回视图的路径，以及识别后缀是jsp文件 -->
+    <!-- Configure the path to return to the view, and identify the file whose suffix is jsp -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
         <property name="prefix" value="/WEB-INF/jsp/"/>

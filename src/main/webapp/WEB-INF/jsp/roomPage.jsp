@@ -26,7 +26,6 @@ function hideURLbar(){ window.scrollTo(0,1); }</script>
 	var calculateOK = false;
 	
 	function chooseNumber(){
-    	//do something
     	userNo = ${signInRoom.userNumber};
     	currentUserNo = ${currentUserNo};
     	if(currentUserNo == userNo){

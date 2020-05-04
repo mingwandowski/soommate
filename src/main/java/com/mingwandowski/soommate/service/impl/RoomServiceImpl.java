@@ -12,7 +12,8 @@ import com.mingwandowski.soommate.dao.IRoomDao;
 import com.mingwandowski.soommate.service.RoomService;
 
 public class RoomServiceImpl implements RoomService {
-	//service依赖于dao(mapper)
+	// IRoomDao is in Ioc container
+	// service depends on dao
 	private IRoomDao roomDao;
 	
 	public void setIRoomDao(IRoomDao roomDao) {
