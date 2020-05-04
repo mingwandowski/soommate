@@ -20,9 +20,9 @@ public class RoomController {
 	@Qualifier("roomService")
 	private RoomService roomService;
 
-	public void setRoomService(RoomService roomService) {
-		this.roomService = roomService;
-	}
+//	public void setRoomService(RoomService roomService) {
+//		this.roomService = roomService;
+//	}
 	
 	@RequestMapping("signInRoom")
 	public String signInRoom(Room room, HttpServletRequest req) {
