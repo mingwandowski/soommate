@@ -10,13 +10,5 @@ public interface AlgorithmService {
 
 	List<User> queryUserByRoomName(String roomName);
 
-	void do2(List<User> userList, HttpServletRequest req);
-
-	void do3(List<User> userList, HttpServletRequest req);
-
-	void do4(List<User> userList, HttpServletRequest req);
-	
-	void do5(List<User> userList, HttpServletRequest req);
-
-
+	void calculate(List<User> userList, int userNumber, HttpServletRequest req);
 }
