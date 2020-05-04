@@ -15,28 +15,28 @@ import com.mingwandowski.soommate.model.User;
 import com.mingwandowski.soommate.service.AlgorithmService;
 
 @RequestMapping("algorithmController")
-@Controller // AlgorithmController加入Ioc容器
+@Controller // put AlgorithmController into Ioc container
 public class AlgorithmController {
-	//控制依赖于Service
 	@Autowired
 	@Qualifier("algorithmService")
 	private AlgorithmService algorithmService;
 	
-	public void setAlgorithmService(AlgorithmService algorithmService) {
-		this.algorithmService = algorithmService;
-	}
+//	public void setAlgorithmService(AlgorithmService algorithmService) {
+//		this.algorithmService = algorithmService;
+//	}
 	
 	@RequestMapping("startCalculate")
 	public String startCalculate(HttpServletRequest req) {
-		//拿到session中roomName和userNumber
+		// get roomName and userNumber from session
 		HttpSession session = req.getSession();
 		Room room = (Room)session.getAttribute("signInRoom");
 		String roomName = room.getRoomName();
 		int userNumber = room.getUserNumber();
-		
-		//根据roomName拿到所有的user
+
+		// get all users by roomName
 		List<User> userList = algorithmService.queryUserByRoomName(roomName);
-		
+
+		//
 		//根据userNumber，选择不同的算法，在service层将计算结果放入t_result
 		switch (userNumber) {
 		case 2: 
