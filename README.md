@@ -8,7 +8,11 @@ Actually this is one thing that bothered us when we moved into our present apart
 
 ## 2. Technique
 
-This full stack project uses Spring-SpringMVC-MyBatis framework, MySQL in the back-end. And basic JavaScript, HTML/CSS, JSP for the front-end. Utlizing Maven to manage the project, and [deployed on my own Raspberry Pi](http://71.69.162.72:27373/soommate/) as a mini web server. In order to avoid the unstable of my Raspberry Pi, there is another version which is much more stable version [deployed on AWS](http://52.53.150.120:8080/soommate/).
+This full stack project uses Spring-SpringMVC-MyBatis framework, MySQL in the back-end. And basic JavaScript, HTML/CSS, JSP for the front-end. 
+
+Utlizing Maven to manage the project, and [deployed on my own Raspberry Pi](http://71.69.162.72:27373/soommate/) as a mini web server. 
+
+In order to avoid the unstable of my Raspberry Pi, there is another version which is much more stable version [deployed on AWS](http://52.53.150.120:8080/soommate/).
 
 ## 3. Demo account
 There is a demo account for new users to see how it worked. 
