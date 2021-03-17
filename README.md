@@ -12,7 +12,7 @@ This full stack project uses Spring-SpringMVC-MyBatis framework, MySQL in the ba
 
 Utlizing Maven to manage the project, and [deployed on my own Raspberry Pi](http://71.69.162.72:27373/soommate/) as a mini web server. 
 
-In order to avoid the unstable of my Raspberry Pi, there is another version which is much more stable version [deployed on AWS](http://3.101.19.225:8080/soommate/).
+In order to avoid the unstable of my Raspberry Pi, there is another version which is much more stable version [deployed on AWS](http://54.67.103.167:8080/soommate/).
 
 ## Demo account
 There is a demo account for new users to see how it worked. 
